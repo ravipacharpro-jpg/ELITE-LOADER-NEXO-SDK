@@ -29,6 +29,7 @@ jobs:
           unzip -o -q cmdtools.zip
           mv cmdline-tools tools
           echo "ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV
+          echo "ANDROID_SDK_ROOT=$HOME/android-sdk" >> $GITHUB_ENV
           echo "$HOME/android-sdk/cmdline-tools/tools/bin" >> $GITHUB_PATH
 
       - name: Accept SDK licenses
