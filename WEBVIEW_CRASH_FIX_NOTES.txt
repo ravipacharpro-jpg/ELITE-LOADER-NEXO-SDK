@@ -1,0 +1,28 @@
+ELITE WEBVIEW / FACEBOOK LOGIN CRASH FIX
+=======================================
+Based on logcat from 26 Oct 2026 (around 07:46:20-07:46:24).
+
+CRASH:
+  java.lang.ClassCastException:
+  Couldn't convert result of type java.lang.Integer to android.os.Bundle
+  $Proxy89.getApplicationRestrictionsForUser
+  android.os.UserManager.getApplicationRestrictions
+  Chromium/WebView policy initialization => fatal SIGTRAP
+
+CHANGED FILES (all other source files unchanged):
+1. Bcore/src/main/java/top/niunaijun/blackbox/fake/hook/ClassInvocationStub.java
+   - Removed catch-all SecurityException fallback that returned Integer 0
+     regardless of the method's declared return type.
+   - Now logs the denied call and propagates the real SecurityException,
+     rather than triggering unrelated ClassCastException failures.
+
+2. Bcore/src/main/java/top/niunaijun/blackbox/fake/service/IUserManagerProxy.java
+   - Added getApplicationRestrictionsForUser MethodHook returning an empty
+     android.os.Bundle for virtual apps. Virtual applications have no host
+     device-management policy restrictions registered with Android.
+
+Verification: ZIP entries and patch assertions checked. APK NOT built in this
+runtime (Android SDK / NDK toolchain not available). Build in AndroidIDE, test
+BGMI -> Facebook login WebView, and provide fresh logcat if other errors occur.
+Google Play Services binder/signature warnings are separate issues not fixed by
+this patch. No Firebase config or GMS files were modified.

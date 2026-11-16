@@ -1,0 +1,1 @@
+/data/user/0/com.termux/files/home/android-sdk/ndk/24.0.8215888/ndk-build[3]: /data/user/0/com.termux/files/home/android-sdk/ndk/24.0.8215888/build/ndk-build: No such file or directory

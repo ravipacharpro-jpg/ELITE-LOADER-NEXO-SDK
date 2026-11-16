@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#061426">
+
+    <ImageView android:id="@+id/login_background_photo"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:src="@drawable/bg_dashboard_art" android:scaleType="centerCrop"
+        android:contentDescription="" />
+
+    <View android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="@drawable/dash_topshade" />
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fillViewport="true" android:clipToPadding="false"
+        android:overScrollMode="never" android:scrollbars="none">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+            android:orientation="vertical" android:paddingBottom="38dp">
+
+            <!-- TOP: symbol + Elite Tool left, standalone neon icon right. -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="top"
+                android:layout_marginTop="26dp"
+                android:paddingStart="12dp" android:paddingEnd="12dp">
+
+                <LinearLayout android:id="@+id/login_header"
+                    android:layout_width="165dp" android:layout_height="44dp"
+                    android:layout_marginEnd="12dp"
+                    android:orientation="horizontal" android:gravity="center_vertical"
+                    android:background="@drawable/elite_login_badge_background">
+
+                    <ImageView android:id="@+id/logo_img"
+                        android:layout_width="51dp" android:layout_height="51dp"
+                        android:layout_marginStart="-2dp"
+                        android:src="@drawable/ic_elite_3d_badge"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Elite Tool 3D symbol" />
+
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_weight="1" android:layout_marginStart="7dp"
+                        android:text="Elite Tool" android:textSize="15sp" android:textStyle="bold"
+                        android:singleLine="true" android:ellipsize="end"
+                        android:fontFamily="sans-serif" android:textColor="#FFFFFF" />
+
+                    <View android:layout_width="9dp" android:layout_height="9dp"
+                        android:layout_marginEnd="12dp" android:backgroundTint="#09E3A0"
+                        android:background="@drawable/elite_login_online_dot" />
+                </LinearLayout>
+
+                <View android:layout_width="0dp" android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageView android:id="@+id/login_top_right_symbol"
+                    android:layout_width="82dp" android:layout_height="82dp"
+                    android:src="@drawable/ic_elite_3d_tile"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Elite Tool icon" />
+            </LinearLayout>
+
+            <!-- Extra vertical space preserves the screenshot's airy upper background. -->
+            <View android:layout_width="match_parent" android:layout_height="0dp"
+                android:layout_weight="1" android:minHeight="52dp" />
+
+            <!-- CENTER-LOWER: glowing deep-blue translucent card. -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/login_card"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginStart="28dp" android:layout_marginEnd="28dp"
+                android:layout_marginBottom="35dp"
+                app:cardBackgroundColor="#DB071A35"
+                app:cardCornerRadius="28dp"
+                app:strokeColor="#51D7FF" app:strokeWidth="1.4dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="vertical" android:gravity="center_horizontal"
+                    android:paddingStart="18dp" android:paddingEnd="18dp"
+                    android:paddingTop="18dp" android:paddingBottom="17dp">
+
+                    <ImageView android:id="@+id/login_hero_symbol"
+                        android:layout_width="165dp" android:layout_height="147dp"
+                        android:src="@drawable/ic_elite_3d_hero"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Blue silver 3D Elite Tool symbol" />
+
+                    <!-- White Elite and electric-blue Tool, both with real text controls. -->
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginTop="2dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Elite" android:textSize="33sp" android:textStyle="bold"
+                            android:fontFamily="sans-serif-black" android:includeFontPadding="false"
+                            android:textColor="#F5F8FF" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text=" Tool" android:textSize="33sp" android:textStyle="bold"
+                            android:fontFamily="sans-serif-black" android:includeFontPadding="false"
+                            android:textColor="#22BFFF" />
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical"
+                        android:layout_marginTop="3dp" android:layout_marginBottom="17dp">
+                        <View android:layout_width="23dp" android:layout_height="1dp" android:background="#40ADDB" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+                            android:text="P R E M I U M  T O O L S" android:singleLine="true"
+                            android:textSize="9sp" android:textColor="#A9C0EA"
+                            android:includeFontPadding="false" />
+                        <View android:layout_width="23dp" android:layout_height="1dp" android:background="#40ADDB" />
+                    </LinearLayout>
+
+                    <FrameLayout android:layout_width="match_parent" android:layout_height="53dp"
+                        android:background="@drawable/elite_login_key_background">
+                        <ImageView android:layout_width="21dp" android:layout_height="21dp"
+                            android:layout_gravity="start|center_vertical" android:layout_marginStart="14dp"
+                            android:src="@drawable/ic_lock" app:tint="#8EC5FA"
+                            android:contentDescription="License key" />
+                        <EditText android:id="@+id/username"
+                            android:layout_width="match_parent" android:layout_height="match_parent"
+                            android:paddingStart="44dp" android:paddingEnd="48dp"
+                            android:gravity="center_vertical" android:background="@android:color/transparent"
+                            android:hint="Enter your license key" android:inputType="textPassword"
+                            android:singleLine="true" android:selectAllOnFocus="false"
+                            android:textSize="13sp" android:textColor="#F5FAFF"
+                            android:textColorHint="#A9C6E8" />
+                        <ImageButton android:id="@+id/btn_paste"
+                            android:layout_width="44dp" android:layout_height="match_parent"
+                            android:layout_gravity="end|center_vertical"
+                            android:background="@android:color/transparent"
+                            android:padding="11dp" android:src="@drawable/baseline_content_paste_go_24"
+                            app:tint="#43D7FF" android:contentDescription="Paste license key" />
+                    </FrameLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton android:id="@+id/login"
+                        android:layout_width="match_parent" android:layout_height="45dp"
+                        android:layout_marginTop="15dp" android:minHeight="0dp"
+                        android:background="@drawable/elite_login_button_blue"
+                        android:text="Log In   ➜" android:textAllCaps="false"
+                        android:textSize="17sp" android:textStyle="bold"
+                        android:textColor="#FFFFFF" />
+
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp" android:gravity="center_vertical"
+                        android:orientation="horizontal">
+                        <ImageView android:layout_width="21dp" android:layout_height="21dp"
+                            android:src="@drawable/ic_elite_shield_check"
+                            android:contentDescription="Security shield" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp" android:singleLine="true"
+                            android:text="Secure license authentication"
+                            android:textSize="11sp" android:textColor="#9FBBDD" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

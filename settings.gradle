@@ -1,0 +1,3 @@
+include ':app', ':black-reflection', ':compiler'
+
+rootProject.name = 'ELITE-LOADER-NEXO-SDK'

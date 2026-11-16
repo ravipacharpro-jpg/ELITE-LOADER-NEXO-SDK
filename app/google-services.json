@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "600335071850",
+    "project_id": "elite-tool-2f0ed",
+    "storage_bucket": "elite-tool-2f0ed.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:600335071850:android:fd57aa5e5f83c742d2a813",
+        "android_client_info": {
+          "package_name": "elite.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "600335071850-ivusicitldvh6a570off8fdsti2c64j1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "elite.com",
+            "certificate_hash": "0d1eebbe5adf1c4d441179b3e5c687aa36704e52"
+          }
+        },
+        {
+          "client_id": "600335071850-kgp3e01p97np6s9t2udducpvqv3ulcuj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxKXx0Nh1otAqKgGMllvdKodIXkx7Ffek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "600335071850-kgp3e01p97np6s9t2udducpvqv3ulcuj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
