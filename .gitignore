@@ -81,3 +81,7 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+# Clean up: exclude build outputs and debug keystore from repo
+/app/build/
+/app/debug.keystore
+.gradle/
