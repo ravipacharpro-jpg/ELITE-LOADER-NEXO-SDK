@@ -57,7 +57,7 @@ public class BoxApplication extends Application {
 
                 @Override
                 public boolean isEnableDaemonService() {
-                    return false;
+                    return true;
                 }
 
                 @Override
